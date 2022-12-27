@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Happy New Year, Dear Natalia!</title>
+  <style>
+  body {
+  background: linear-gradient(to bottom, #ffc107, #ffffff) no-repeat;
+}
+    .container {
+      display: flex;
+      margin: 20px;
+      max-height: calc(100vh - 15vh);
+    }
+    .left {
+      flex: 1;
+      overflow: hidden;
+      margin: 20px;
+      text-align: center;
+    }
+    .right {
+      flex: 1;
+      text-align: center;
+      margin: 20px;
+    }
+    img {
+      width: auto;
+      height: 100%;
+      border-radius: 20px;
+      transition: opacity 0.5s;
+      opacity: 0;
+    }
+    h1 {
+      text-align: center;
+      opacity: 1;
+      transition: opacity 1s;
+    }
+    p {
+      font-size: 1.2vw;
+      opacity: 0;
+      transition: opacity 1s;
+    }
+    .bottom-text {
+      font-style: italic;
+      color: gray;
+      padding: 0px 0px 50px 0px;
+    }
+  </style>
+</head>
+</head>
+<body onclick="setTimeout(function() {
+  let h1 = document.querySelector('h1');
+  let text = 'Happy New Year, dear Natalia!';
+  let i = 0;
+  h1.innerHTML = '';
+  let interval = setInterval(function() {
+    h1.innerHTML += text.charAt(i);
+    i++;
+    if (i >= text.length) {
+      clearInterval(interval);
+    }
+  }, 50);
+}, 0); setTimeout(function() {
+  document.querySelector('img').style.transition = 'opacity 2s';
+  document.querySelector('img').style.opacity = 1;
+}, 1000); setTimeout(function() {
+  let p = document.querySelectorAll('p');
+  for (let i = 0; i < p.length; i++) {
+    p[i].style.opacity = 1;
+  }
+}, 2000)">
+  <h1></h1>
+  <div class="container">
+    <div class="left">
+      <img src="natalia.jfif" alt="Natalia">
+    </div>
+    <div class="right">
+      <p>Natalia Volkova, a name so fine</p>
+      <p>Her beauty and grace, forever shine</p>
+      <p>She dances through life with a heart full of fire</p>
+      <p>Inspiring all those who admire</p>
+      <p>&nbsp</p>
+      <p>Her strength and her courage, they know no bounds</p>
+      <p>She conquers each challenge without making a sound</p>
+      <p>Natalia Volkova, a woman of class</p>
+      <p>Her spirit unbreakable, her beauty surpass</p>
+      <p>&nbsp</p>
+      <p>She shines bright like a star in the night</p>
+      <p>Natalia Volkova, a true delight</p>
+      <p>Her grace and her poise, a sight to behold</p>
+      <p>She's a story waiting to be told</p>
+      <p>&nbsp</p>
+      <p class="bottom-text"><b>Интересный факт: код страницы и стих - были созданы прототипом чат-бота с искуственным интеллектом<a href = 'https://openai.com/blog/chatgpt/'> chatGPT</a> специально для Наташи.
+Конечно на основании ТЗ тайного Санты (:</b></p>
+    </div>
+  </div>
+</body>
+</html>
